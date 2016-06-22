@@ -4,9 +4,10 @@ import { EventEmitter } from 'events';
 /**
  * Create a new test with an optional name string. cb(t) fires with the new test object t once all preceeding tests have finished. Tests execute serially.
  */
-declare function tape (cb: tape.TestCase): tape.Test;
-declare function tape (options: tape.Options, cb: tape.TestCase): tape.Test;
 declare function tape (name: string, options: tape.Options, cb: tape.TestCase): tape.Test;
+declare function tape (name: string, cb: tape.TestCase): tape.Test;
+declare function tape (options: tape.Options, cb: tape.TestCase): tape.Test;
+declare function tape (cb: tape.TestCase): tape.Test;
 
 declare module tape {
   export interface TestCase {
