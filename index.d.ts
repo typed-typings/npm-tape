@@ -14,7 +14,7 @@ declare module tape {
     (test: Test): any;
   }
 
-  export interface Options {
+  export interface Options extends Object {
     skip?: boolean;
     timeout?: number;
   }
